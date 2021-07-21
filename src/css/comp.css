@@ -1,0 +1,33 @@
+.jobListng {
+  padding: 2rem;
+
+  display: flex;
+
+  background-color: var(--background-col-sec);
+  border-radius: 10px;
+  box-shadow: var(--boxShadow-prmy);
+}
+
+.listingLeft {
+  display: flex;
+}
+
+.jobListing__SubTextCon {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 1rem;
+}
+
+.jobListing__CompannyName {
+  color: var(--col-Prmy-mod);
+}
+
+.jobListing__Position {
+  font-weight: var(--fw-sec);
+  color: var(--fcol-sec);
+}
+
+.jobListing__Label:first-child {
+  margin-right: 2rem;
+  margin: 0 2rem;
+}
