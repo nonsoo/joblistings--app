@@ -1,6 +1,6 @@
 import React from "react";
 
-const jobs = ({ indivJob }) => {
+const jobs = ({ indivJob, setFilterdState, FilterdLst }) => {
   const FiltersForJobs = [
     indivJob.level,
     indivJob.role,
@@ -8,7 +8,16 @@ const jobs = ({ indivJob }) => {
     ...indivJob.tools,
   ];
 
-  console.log(FiltersForJobs);
+  const FilterJobFunc = (filterName) => {
+    console.log(`I have click the ${filterName} button`);
+    setFilterdState(
+      FilterdLst.filter((newJob) => {
+        if (newJob.level !== filterName || newJob.role !== filterName) {
+          return newJob;
+        }
+      })
+    );
+  };
   return (
     <div className="jobListng">
       <div className="listingLeft">
@@ -32,7 +41,11 @@ const jobs = ({ indivJob }) => {
 
       <div className="listingRight">
         {FiltersForJobs.map((filterdJob) => (
-          <button key={Math.floor(Math.random() * 10000)} className="FilterJob">
+          <button
+            key={Math.floor(Math.random() * 10000)}
+            className="FilterJob"
+            onClick={() => FilterJobFunc(filterdJob)}
+          >
             {filterdJob}
           </button>
         ))}

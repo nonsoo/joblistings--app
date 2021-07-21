@@ -14,7 +14,12 @@ function App() {
       <div className="banner"></div>
       <section className="listingContainer mainContent">
         {jobListingsState.map((job) => (
-          <Jobs key={job.id} indivJob={job} />
+          <Jobs
+            key={job.id}
+            indivJob={job}
+            setFilterdState={setJobListingsState}
+            FilterdLst={jobListingsState}
+          />
         ))}
       </section>
     </div>
