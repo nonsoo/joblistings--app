@@ -9,8 +9,6 @@ import Jobs from "./Components/Jobs";
 function App() {
   const [jobListingsState, setJobListingsState] = useState(data);
 
-  console.log(jobListingsState);
-
   return (
     <div className="job-listing--site">
       <div className="banner"></div>

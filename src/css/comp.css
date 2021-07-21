@@ -2,6 +2,7 @@
   padding: 2rem;
 
   display: flex;
+  justify-content: space-between;
 
   background-color: var(--background-col-sec);
   border-radius: 10px;
@@ -25,9 +26,52 @@
 .jobListing__Position {
   font-weight: var(--fw-sec);
   color: var(--fcol-sec);
+  margin-top: 0.5rem;
 }
 
+.jobListing__Label {
+  padding: 0.75em;
+  border-radius: 35%;
+
+  color: var(--fcol-prmy);
+}
 .jobListing__Label:first-child {
-  margin-right: 2rem;
   margin: 0 2rem;
+
+  background-color: var(--col-Prmy-mod);
+}
+
+.jobListing__Label:nth-child(2) {
+  background-color: var(--col-Neu-darkerGrayCyan);
+}
+
+.listingRight {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.FilterJob {
+  border: none;
+  padding: 1rem 2rem;
+
+  background-color: var(--col-Prmy-mod);
+  color: var(--fcol-prmy);
+
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 800px) {
+  .jobListng {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .listingRight {
+    border-top: 1px solid black;
+    padding: 1.25rem 0;
+  }
 }

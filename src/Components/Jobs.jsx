@@ -1,6 +1,14 @@
 import React from "react";
 
 const jobs = ({ indivJob }) => {
+  const FiltersForJobs = [
+    indivJob.level,
+    indivJob.role,
+    ...indivJob.languages,
+    ...indivJob.tools,
+  ];
+
+  console.log(FiltersForJobs);
   return (
     <div className="jobListng">
       <div className="listingLeft">
@@ -20,6 +28,14 @@ const jobs = ({ indivJob }) => {
             <p className="jobListing__SubText">{indivJob.location}</p>
           </div>
         </div>
+      </div>
+
+      <div className="listingRight">
+        {FiltersForJobs.map((filterdJob) => (
+          <button key={Math.floor(Math.random() * 10000)} className="FilterJob">
+            {filterdJob}
+          </button>
+        ))}
       </div>
     </div>
   );
